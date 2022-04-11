@@ -14,7 +14,7 @@ function App() {
         console.log(res)
         setBooks(res.data);
       } catch (err){
-        console.log(err)
+        console.log(err) 
       }
     }
     loadBooks()
