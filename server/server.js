@@ -10,6 +10,8 @@ import path from 'path';
 const __dirname = path.resolve()
 
 import customRoutes from "./routes/customRoutes.js"
+import webhookRoutes from "./routes/webhookRoutes.js"
+import tiersCron from './controller/tiersCron.js'
 
 const app = new Koa();
 
@@ -24,6 +26,7 @@ app.use(cors());
 const router = new Router();
 
 customRoutes(router)
+webhookRoutes(router)
 
 app.use(router.routes()).use(router.allowedMethods());
 

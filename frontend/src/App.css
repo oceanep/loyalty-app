@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+ul {
+  list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: #f3f3f3;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: #808080;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-container {
+  background-color: #212121;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  font-size: 16px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.User-Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 25vw;
+  min-height: 25vw;
+  border-radius: 39px;
+  box-shadow:  25px 25px 50px #161616,
+             -25px -25px 50px #2c2c2c;
+  padding: 50px 0px 20px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Info-Item {
+  border-bottom: 1px solid #1a1a1a;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.4em;
+
+}
+
+.Info-Item:nth-of-type(1) {
+  border-top: 1px solid #1a1a1a;
+}
+
+.label {
+  color: #808080;
+  font-size: 12px;
+}
+
+.Nav-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.4em;
+  padding: 25px 20px 0px 20px;
+}
+
+.Nav-Button {
+  border-radius: 26px;
+  background: linear-gradient(145deg, #232323, #1e1e1e);
+  box-shadow:  5px 5px 10px #171717,
+             -5px -5px 10px #2b2b2b;
+  padding: 10px 10px;
+  min-width: 75px;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+.Nav-Button:active {
+  background: linear-gradient(145deg, #1e1e1e, #232323);
+}
+
+.Bar-Container {
+  border-bottom: 1px solid #1a1a1a;
+  padding: 20px 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Bar-Base {
+  margin-top: 15px;
+  border-radius: 175px;
+  background: #212121;
+  box-shadow: inset 3px 3px 5px #171717,
+              inset -3px -3px 5px #2b2b2b;
+  width: 100%;
+  height: 16px;
+}
+
+.Bar {
+  border-radius: 90px;
+  background: linear-gradient(145deg, #fffe27, #ec8314);
+  height: 10px;
+  margin-top: 3px;
+  transition: width 1s;
+}
+
+.Bar-Info {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Order-Item {
+  flex-direction: column;
+}
+
+.Order-Info {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.Order-Info:nth-of-type(2) {
+  margin: 10px 0px;
+}
+
+.Title {
+  text-align: center;
+}
+
+.Main-Title {
+  margin-bottom: 20px;
+}
+
+.User-List {
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.Customers-Container {
+  width: 100%;
+}
+
+.Customers {
+  justify-content: center;
 }

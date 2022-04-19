@@ -1,42 +1,28 @@
-import { useEffect, useState } from 'react'
 import axios from 'axios'
-import logo from './logo.svg';
+import {
+  BrowserRouter as
+  Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import Users from './components/Users'
+import UserInfo from './components/UserInfo'
+import UserOrders from './components/UserOrders'
+
 import './App.css';
 
 function App() {
 
-  const [books, setBooks] = useState([])
-
-  useEffect(() => {
-    const loadBooks = async () => {
-      try {
-        const res = await axios.get("http://localhost:8000/book");
-        console.log(res)
-        setBooks(res.data);
-      } catch (err){
-        console.log(err) 
-      }
-    }
-    loadBooks()
-    console.log('books', books)
-  },  [])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <ul>
-        {
-          books.length > 0 ?
-            books.map(book => <li key={book}>{book}</li>)
-          :
-            null
-        }
-        </ul>
-      </header>
+    <div className="App-container">
+        <Router>
+          <Routes>
+            <Route exact path='/' element={<Users/>} />
+            <Route exact path='/user/:id' element={<UserInfo/>} />
+            <Route exact path='/orders/:id' element={<UserOrders/>} />
+          </Routes>
+        </Router>
     </div>
   );
 }
