@@ -8,7 +8,7 @@ const headers = {
 const usersApi = {
   async getUsers() {
     try {
-      const res = await axios.get(`http://${api_endpoint}/users`, headers);
+      const res = await axios.get(`http://${api_endpoint}/api/users`, headers);
       return res.data
     } catch (err){
       console.log(err)
@@ -16,7 +16,7 @@ const usersApi = {
   },
   async getUserInfo(id) {
     try {
-      const res = await axios.get(`http://${api_endpoint}/user/${id}`, headers);
+      const res = await axios.get(`http://${api_endpoint}/api/user/${id}`, headers);
       return res.data
     } catch (err){
       console.log(err)
@@ -24,7 +24,7 @@ const usersApi = {
   },
   async getUserOrders(id) {
     try {
-      const res = await axios.get(`http://${api_endpoint}/orders/${id}`, headers);
+      const res = await axios.get(`http://${api_endpoint}/api/orders/${id}`, headers);
         console.log('res: ', res)
       return res.data
     } catch (err){

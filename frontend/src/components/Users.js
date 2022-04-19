@@ -8,6 +8,7 @@ function Users() {
   useEffect(() => {
     const loadUsers = async () => {
       const res = await usersApi.getUsers();
+      console.log(res)
       setUsers(res);
     }
     loadUsers()
@@ -16,10 +17,10 @@ function Users() {
   return(
     <div className="User-Info User-List">
       <div className="Main-Title">Customers</div>
-      <div className="Customers-Container">
+      <div className="Customers-Container Scrollable">
       {
         users?.length > 0 ?
-          users.map(user => <Link className="Info-Item Customers" to={`/user/${user.user_id}`} key={`${user.user_id}`} >{user.name}</Link>)
+          users.map(user => <Link className="Info-Item Customers" to={`/customer/${user.user_id}`} key={`${user.user_id}`} >{user.name}</Link>)
         :
           null
       }

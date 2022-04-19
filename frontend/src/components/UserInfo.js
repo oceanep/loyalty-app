@@ -54,7 +54,7 @@ function UserInfo() {
       <ProgressBar next_req={userInfo.next_tier_req} until_next={userInfo.until_next_amount} prev_req={userInfo.prev_tier_req} />
       <div className="Nav-Container">
         <Link className="Nav-Button" to="/" >Users</Link>
-        <Link className="Nav-Button" to={`/orders/${id}`}>Orders</Link>
+        <Link className="Nav-Button" to={`/customer_orders/${id}`}>Orders</Link>
       </div>
     </div>
   )

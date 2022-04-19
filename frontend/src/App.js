@@ -18,9 +18,9 @@ function App() {
     <div className="App-container">
         <Router>
           <Routes>
-            <Route exact path='/' element={<Users/>} />
-            <Route exact path='/user/:id' element={<UserInfo/>} />
-            <Route exact path='/orders/:id' element={<UserOrders/>} />
+            <Route path='/' element={<Users/>} />
+            <Route exact path='/customer/:id' element={<UserInfo/>} />
+            <Route exact path='/customer_orders/:id' element={<UserOrders/>} />
           </Routes>
         </Router>
     </div>

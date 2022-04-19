@@ -5,9 +5,14 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build index.js -s",
+    "build": "npm run clean && npm run build-server",
+    "start": "NODE_ENV=production node ./index.js",
     "dev": "nodemon --exec babel-node index.js"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "http-status": "^1.5.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
