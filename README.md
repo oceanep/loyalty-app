@@ -6,6 +6,15 @@ cd frontend/ and run yarn start
 
 backend should be running on localhost:8000 and frontend on localhost:3000
 
+Endpoint to add new order: /webhook/order
+Format: {
+	"customerId": "192", 
+	"customerName": "Spike Speigel", 
+	"orderId": "T133", 
+	"totalInCents": 58250, 
+	"date": "2022-03-04T05:29:59.850Z" 
+}
+
 to check how the app will run on prod, run yarn heroku-postbuild, then run yarn dev
 this will load the build app and serve it through the koa router
 
