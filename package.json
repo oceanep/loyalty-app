@@ -11,10 +11,10 @@
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build index.js -s",
-    "build": "npm run clean && npm run build-server",
+    "build": "yarn clean && yarn build-server",
     "start": "NODE_ENV=production node ./index.js",
     "dev": "NODE_ENV=development nodemon --exec babel-node index.js",
-    "heroku-postbuild": "cd frontend && yarn install && yarn run build"
+    "heroku-postbuild": "cd frontend && yarn install && yarn build"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
