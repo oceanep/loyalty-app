@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const api_endpoint = env.REACT_APP_BASE_URL
+const api_endpoint = process.env.REACT_APP_BASE_URL
 const headers = {
     "Content-type": "application/json"
 }
