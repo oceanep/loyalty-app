@@ -168,8 +168,5 @@ a:hover {
 .Scrollable::-webkit-scrollbar-thumb {
   border-radius: 50px;
   background: linear-gradient(145deg, #232323, #1e1e1e);
-  box-shadow:  0px 0px 6px #0e0e0e,
-               -2px -2px 0px #343434;
-  width: 0.5em;
-  height: 10px;
+  outline: 1px solid #1f1f1f;
 }

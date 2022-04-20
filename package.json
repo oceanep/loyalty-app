@@ -1,17 +1,23 @@
 {
-  "name": "ichigo-test",
+  "name": "loyalty_tiers_app",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "author": "Ocean Evers-Peete",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-server": "babel -d ./build index.js -s",
     "build": "npm run clean && npm run build-server",
     "start": "NODE_ENV=production node ./index.js",
-    "dev": "nodemon --exec babel-node index.js"
+    "dev": "NODE_ENV=development nodemon --exec babel-node index.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "fs": "^0.0.1-security",
     "http-status": "^1.5.0",
     "koa": "^2.13.4",
