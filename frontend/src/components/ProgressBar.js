@@ -11,7 +11,7 @@ const ProgressBar = ({next_req, until_next, prev_req}) => {
   const progress = `${percentage}%`
   return (
     <div className="Bar-Container">
-      <span className="label">Progress</span>
+      <span className="label">Progress to Next Tier</span>
       <div className="Bar-Info">
         <span className="label">{`$${prev_req}`}</span>
         <span className="label">{`$${next_req}`}</span>
