@@ -24,7 +24,10 @@ if (NODE_ENV == 'production') {
   const {DATABASE_URL} = process.env
 
   pool = new Pool({
-    connectionString: DATABASE_URL
+    connectionString: DATABASE_URL,
+    ssl: {
+    rejectUnauthorized: false
+  }
   })
 
 }
