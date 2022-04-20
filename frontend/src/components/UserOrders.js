@@ -10,7 +10,6 @@ function UserOrders() {
   useEffect(() => {
     const getUserOrders = async () => {
       const orders = await usersApi.getUserOrders(id)
-      console.log('orders; ', orders)
       setOrders(orders)
     }
     getUserOrders()

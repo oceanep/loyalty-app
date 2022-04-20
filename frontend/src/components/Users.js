@@ -8,7 +8,6 @@ function Users() {
   useEffect(() => {
     const loadUsers = async () => {
       const res = await usersApi.getUsers();
-      console.log(res)
       setUsers(res);
     }
     loadUsers()
