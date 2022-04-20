@@ -14,7 +14,7 @@
     "build": "npm run clean && npm run build-server",
     "start": "NODE_ENV=production node ./index.js",
     "dev": "NODE_ENV=development nodemon --exec babel-node index.js",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "heroku-postbuild": "cd frontend && yarn install && yarn run build"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
